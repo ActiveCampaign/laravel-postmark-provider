@@ -1,6 +1,6 @@
 {
     "require": {
-        "wildbit/swiftmailer-postmark": "~1.0",
+        "wildbit/swiftmailer-postmark": "~1.1",
         "illuminate/mail": "~5.0"
     },
     "autoload": {

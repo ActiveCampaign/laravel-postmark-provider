@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fccb863fb86c4bca1063e77438b0fd25",
+    "hash": "1c0b68033893825025ecdb2627ec471d",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -607,16 +607,16 @@
         },
         {
             "name": "wildbit/swiftmailer-postmark",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wildbit/swiftmailer-postmark.git",
-                "reference": "2e73c44d2599337b2464985024e2e125e59a75d9"
+                "reference": "2aff78a6cb2892e0c02e64edb753ad41d8f6496c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wildbit/swiftmailer-postmark/zipball/2e73c44d2599337b2464985024e2e125e59a75d9",
-                "reference": "2e73c44d2599337b2464985024e2e125e59a75d9",
+                "url": "https://api.github.com/repos/wildbit/swiftmailer-postmark/zipball/2aff78a6cb2892e0c02e64edb753ad41d8f6496c",
+                "reference": "2aff78a6cb2892e0c02e64edb753ad41d8f6496c",
                 "shasum": ""
             },
             "require": {
@@ -624,8 +624,10 @@
                 "swiftmailer/swiftmailer": "~5.1"
             },
             "require-dev": {
-                "illuminate/mail": "~5.0",
                 "phpunit/phpunit": "~4.5"
+            },
+            "suggest": {
+                "wildbit/laravel-postmark-provider": "~1.0"
             },
             "type": "library",
             "autoload": {
@@ -644,7 +646,7 @@
                 }
             ],
             "description": "A Swiftmailer Transport for Postmark.",
-            "time": "2015-02-27 16:57:48"
+            "time": "2015-03-19 13:06:11"
         }
     ],
     "packages-dev": [],
