@@ -1,4 +1,5 @@
 {
+    "name": "wildbit/laravel-postmark-provider",
     "require": {
         "wildbit/swiftmailer-postmark": "~1.1",
         "illuminate/mail": "~5.0"
