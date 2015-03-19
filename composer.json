@@ -4,6 +4,7 @@
         "wildbit/swiftmailer-postmark": "~1.1",
         "illuminate/mail": "~5.0"
     },
+    "license": "MIT",
     "autoload": {
         "psr-0": {
             "Postmark\\": "src/"
