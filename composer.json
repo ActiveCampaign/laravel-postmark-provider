@@ -2,7 +2,7 @@
     "name": "wildbit/laravel-postmark-provider",
     "description": "An officially supported mail provider to send mail from Laravel through Postmark, see instructions for integrating it here: https://github.com/wildbit/laravel-postmark-provider/blob/master/README.md",
     "require": {
-        "wildbit/swiftmailer-postmark": "~1.1",
+        "wildbit/swiftmailer-postmark": "~2.0",
         "illuminate/mail": "~5.0"
     },
     "license": "MIT",
