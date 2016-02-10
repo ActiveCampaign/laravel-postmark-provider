@@ -35,13 +35,6 @@ class LaravelMailProvider extends ServiceProvider {
 				$mailer->alwaysFrom($from['address'], $from['name']);
 			}
 
-			// Here we will determine if the mailer should be in "pretend" mode for this
-			// environment, which will simply write out e-mail to the logs instead of
-			// sending it over the web, which is useful for local dev environments.
-			$pretend = $app['config']->get('mail.pretend', false);
-
-			$mailer->pretend($pretend);
-
 			return $mailer;
 		});
 	}
@@ -55,10 +48,6 @@ class LaravelMailProvider extends ServiceProvider {
 	 */
 	protected function setMailerDependencies($mailer, $app) {
 		$mailer->setContainer($app);
-
-		if ($app->bound('log')) {
-			$mailer->setLogger($app['log']->getMonolog());
-		}
 
 		if ($app->bound('queue')) {
 			$mailer->setQueue($app['queue.connection']);
