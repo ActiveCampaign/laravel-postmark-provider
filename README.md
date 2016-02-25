@@ -18,13 +18,13 @@ composer require wildbit/laravel-postmark-provider
 
 ##### 3. Update your application's MailProvider in your `config/app.php` file:
 
-Find this line: 
+Find this line:
 ```php
-'Illuminate\Mail\MailServiceProvider',
-``` 
-And **replace** it with: 
+Illuminate\Mail\MailServiceProvider::class,
+```
+And **replace** it with:
 ```php
-'Postmark\Adapters\LaravelMailProvider',
+Postmark\Adapters\LaravelMailProvider::class,
 ```
 
 That's it! You've integrated Postmark into your Laravel Application.
