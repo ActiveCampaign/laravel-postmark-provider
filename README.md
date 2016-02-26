@@ -27,4 +27,10 @@ And **replace** it with:
 Postmark\Adapters\LaravelMailProvider::class,
 ```
 
+##### 4. Change your mail driver to `postmark` in your `.env` file:
+
+```
+MAIL_DRIVER=postmark
+```
+
 That's it! You've integrated Postmark into your Laravel Application.
