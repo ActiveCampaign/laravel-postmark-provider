@@ -10,13 +10,18 @@ Integrating Postmark is incredibly easy:
 composer require wildbit/laravel-postmark-provider
 ```
 
-##### 2. Add your server token to your `config/services.php` file:
-
-```php
-'postmark' => '<YOUR_SERVER_TOKEN>',
+##### 2. Define your server token in your `.env` file:
+```
+POSTMARK_TOKEN=<YOUR_SERVER_TOKEN>
 ```
 
-##### 3. Update your application's MailProvider in your `config/app.php` file:
+##### 3. Add Postmark to your `config/services.php` file (it will use the token in your `.env` from Step 2):
+
+```php
+'postmark' => env('POSTMARK_TOKEN'),
+```
+
+##### 4. Update your application's MailProvider in your `config/app.php` file:
 
 Find this line: 
 ```php
