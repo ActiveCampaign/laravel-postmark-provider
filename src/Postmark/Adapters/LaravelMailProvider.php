@@ -1,11 +1,17 @@
-<?php namespace Postmark\Adapters;
+<?php
+namespace Postmark\Adapters;
 
 use Illuminate\Mail\Mailer;
 use Illuminate\Support\ServiceProvider;
 use Swift_Mailer;
 
-class LaravelMailProvider extends ServiceProvider {
-
+class LaravelMailProvider extends ServiceProvider
+{
+	/**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
 	protected $defer = true;
 
 	/**
@@ -13,10 +19,11 @@ class LaravelMailProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function register() {
-		$this->app->singleton('mailer', function ($app) {
+    public function register()
+    {
 			$this->registerSwiftMailer();
 
+        	$this->app->singleton('mailer', function ($app) {
 			// Once we have create the mailer instance, we will set a container instance
 			// on the mailer. This allows us to resolve mailer classes via containers
 			// for maximum testability on said classes instead of passing Closures.
@@ -35,6 +42,12 @@ class LaravelMailProvider extends ServiceProvider {
 				$mailer->alwaysFrom($from['address'], $from['name']);
 			}
 
+            $to = $app['config']['mail.to'];
+
+            if (is_array($to) && isset($to['address'])) {
+                $mailer->alwaysTo($to['address'], $to['name']);
+            }
+
 			return $mailer;
 		});
 	}
@@ -46,11 +59,12 @@ class LaravelMailProvider extends ServiceProvider {
 	 * @param  \Illuminate\Foundation\Application  $app
 	 * @return void
 	 */
-	protected function setMailerDependencies($mailer, $app) {
+    protected function setMailerDependencies($mailer, $app)
+    {
 		$mailer->setContainer($app);
 
 		if ($app->bound('queue')) {
-			$mailer->setQueue($app['queue.connection']);
+            $mailer->setQueue($app['queue']);
 		}
 	}
 
