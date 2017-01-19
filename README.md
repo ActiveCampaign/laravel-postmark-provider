@@ -1,8 +1,6 @@
 ### Sunset Notice:
 
-The Laravel Postmark Provider is no longer being actively updated. The following is a [short discussion on the reasoning for discontinuing the provider](https://github.com/wildbit/laravel-postmark-provider/issues/4#issuecomment-238529465)
-
-The Postmark Laravel Provider was built and will work with versions of Laravel up to 5.2, if you'd still like to use it, please feel free to follow the instructions below. _However_, it's really easy to still use Postmark in Laravel using SMTP, and since the SMTP provider is part of Laravel, it'll keep working when you update Laravel and you don't need to install any dependencies.
+The Laravel Postmark Provider is no longer being actively updated. The following is a [short discussion on the reasoning for discontinuing the provider](https://github.com/wildbit/laravel-postmark-provider/issues/4#issuecomment-238529465). _However_, **it's still really easy to still use Postmark in Laravel using SMTP**, and since the SMTP provider is part of Laravel, it'll keep working when you update Laravel and you won't need to install any dependencies to use it.
 
 Here's everything you'll need:
 
@@ -45,13 +43,9 @@ return [
 
 We provide an [official PHP library](https://github.com/wildbit/postmark-php) that can be installed via composer to do more advanced Postmark integrations. If you want to move beyond basic email sending, Postmark-PHP will give you easy access to all Postmark API endpoints.
 
-### Using the provider anyway:
+### Keep using this provider anyway:
 
-#### wildbit/laravel-postmark-provider Overview:
-
-This package provides a very simple path to adding Postmark mail support in Laravel 5+
-
-Integrating Postmark is incredibly easy:
+The Postmark Laravel Provider was built and will work with versions of Laravel up to 5.2, if you'd still like to use it, please feel free to follow the instructions below.
 
 ##### 1. Install this package in your Laravel Project:
 
