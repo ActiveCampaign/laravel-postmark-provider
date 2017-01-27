@@ -66,13 +66,19 @@ POSTMARK_TOKEN=<YOUR_SERVER_TOKEN>
 
 ##### 4. Update your application's MailProvider in your `config/app.php` file:
 
-Find this line: 
+Find this line:
 ```php
-'Illuminate\Mail\MailServiceProvider',
-``` 
-And **replace** it with: 
+Illuminate\Mail\MailServiceProvider::class,
+```
+And **replace** it with:
 ```php
-'Postmark\Adapters\LaravelMailProvider',
+Postmark\Adapters\LaravelMailProvider::class,
+```
+
+##### 4. Change your mail driver to `postmark` in your `.env` file:
+
+```
+MAIL_DRIVER=postmark
 ```
 
 That's it! You've integrated Postmark into your Laravel Application.
