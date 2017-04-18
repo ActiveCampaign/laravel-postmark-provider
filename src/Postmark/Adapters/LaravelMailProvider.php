@@ -5,6 +5,7 @@ use Illuminate\Support\ServiceProvider;
 use Swift_Mailer;
 
 class LaravelMailProvider extends ServiceProvider {
+
 	/**
 	 * Indicates if loading of the provider is deferred.
 	 *
