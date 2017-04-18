@@ -17,8 +17,7 @@ class LaravelMailProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function register()
-	{
+	public function register() {
 		$this->registerSwiftMailer();
 
 		$this->app->singleton('mailer', function ($app) {
@@ -57,8 +56,7 @@ class LaravelMailProvider extends ServiceProvider {
 	 * @param  \Illuminate\Foundation\Application  $app
 	 * @return void
 	 */
-	protected function setMailerDependencies($mailer, $app)
-	{
+	protected function setMailerDependencies($mailer, $app) {
 		$mailer->setContainer($app);
 
 		if ($app->bound('queue')) {
@@ -83,7 +81,7 @@ class LaravelMailProvider extends ServiceProvider {
 	 *
 	 * @return array
 	 */
-    public function provides() {
+	public function provides() {
 		return ['mailer', 'swift.mailer'];
 	}
 
